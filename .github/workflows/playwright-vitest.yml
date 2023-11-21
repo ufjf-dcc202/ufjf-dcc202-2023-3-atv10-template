@@ -23,6 +23,8 @@ jobs:
         run: npx playwright test
       - name: Run Vitest tests
         run: npx vitest test
+      - name: Kill server
+        run: killall http-server
       - uses: actions/upload-artifact@v3
         if: always()
         with:
